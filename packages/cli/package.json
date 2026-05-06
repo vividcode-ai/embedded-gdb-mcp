@@ -1,6 +1,6 @@
 {
   "name": "@vividcodeai/embedded-gdb-mcp",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "MCP server for GDB debugging functionality",
   "bin": {
     "embedded-gdb-mcp": "bin/cli.js"
@@ -17,11 +17,11 @@
   ],
   "license": "MIT",
   "optionalDependencies": {
-    "@vividcodeai/embedded-gdb-mcp-darwin-x64": "0.0.2",
-    "@vividcodeai/embedded-gdb-mcp-darwin-arm64": "0.0.2",
-    "@vividcodeai/embedded-gdb-mcp-linux-x64": "0.0.2",
-    "@vividcodeai/embedded-gdb-mcp-linux-arm64": "0.0.2",
-    "@vividcodeai/embedded-gdb-mcp-win32-x64": "0.0.2"
+    "@vividcodeai/embedded-gdb-mcp-darwin-x64": "0.0.3",
+    "@vividcodeai/embedded-gdb-mcp-darwin-arm64": "0.0.3",
+    "@vividcodeai/embedded-gdb-mcp-linux-x64": "0.0.3",
+    "@vividcodeai/embedded-gdb-mcp-linux-arm64": "0.0.3",
+    "@vividcodeai/embedded-gdb-mcp-win32-x64": "0.0.3"
   },
   "engines": {
     "node": ">=16"

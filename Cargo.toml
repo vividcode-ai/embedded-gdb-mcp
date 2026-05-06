@@ -1,9 +1,13 @@
 [package]
 name = "embedded-gdb-mcp"
-version = "0.0.2"
+version = "0.0.3"
 edition = "2021"
+authors = ["vividcodeAI <vividcode@gmail.com>", "vividcodeAI"]
 description = "MCP server for GDB debugging functionality"
 license = "MIT"
+readme = "README.md"
+keywords = ["mcp", "gdb", "communication", "embedded", "protocol", "embedded-gdb"]
+categories = ["development-tools", "embedded"]
 
 [dependencies]
 rmcp = { version = "0.3.2", features = ["server", "macros", "transport-io"] }

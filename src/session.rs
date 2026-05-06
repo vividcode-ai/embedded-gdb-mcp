@@ -112,7 +112,7 @@ impl GdbSession {
         let timeout_duration = std::time::Duration::from_secs(10);
         let mut output = String::new();
 
-        tokio::time::timeout(timeout_duration, async {
+        let result = tokio::time::timeout(timeout_duration, async {
             loop {
                 let mut line = String::new();
                 let n = self.reader.read_line(&mut line).await.map_err(|e| {
@@ -132,9 +132,12 @@ impl GdbSession {
                 }
             }
         })
-        .await
-        .map_err(|_| GdbError::GdbTimeout)?
-        .map_err(|e| e)?;
+        .await;
+
+        match result {
+            Err(_) => Err(GdbError::GdbTimeout)?,
+            Ok(inner) => inner?,
+        }
 
         Ok(output)
     }

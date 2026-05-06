@@ -16,6 +16,8 @@ use schemars::JsonSchema;
 
 use crate::session::{GdbSession, normalize_path};
 
+type SessionMap = Arc<RwLock<HashMap<String, Arc<RwLock<GdbSession>>>>>;
+
 // =============================================================================
 // Argument Types for all 17 tools
 // =============================================================================
@@ -192,7 +194,7 @@ struct SourceInfo {
 #[derive(Clone)]
 pub struct EmbeddedGdbToolHandler {
     tool_router: ToolRouter<EmbeddedGdbToolHandler>,
-    sessions: Arc<RwLock<HashMap<String, Arc<RwLock<GdbSession>>>>>,
+    sessions: SessionMap,
 }
 
 impl EmbeddedGdbToolHandler {
@@ -749,7 +751,7 @@ impl ServerHandler for EmbeddedGdbToolHandler {
 // =============================================================================
 
 async fn get_session(
-    sessions: &Arc<RwLock<HashMap<String, Arc<RwLock<GdbSession>>>>>,
+    sessions: &SessionMap,
     session_id: &str,
 ) -> Result<Arc<RwLock<GdbSession>>, McpError> {
     let sessions = sessions.read().await;
