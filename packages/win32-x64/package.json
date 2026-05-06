@@ -1,0 +1,13 @@
+{
+  "name": "@vividcodeai/embedded-gdb-mcp-win32-x64",
+  "version": "0.0.1",
+  "os": ["win32"],
+  "cpu": ["x64"],
+  "files": ["bin/", "README.md", "README.zh.md"],
+  "description": "Prebuilt binary for Windows x64 - embedded-gdb-mcp",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vividcode-ai/embedded-gdb-mcp.git"
+  }
+}

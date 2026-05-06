@@ -1,0 +1,24 @@
+{
+  "name": "@vividcodeai/embedded-gdb-mcp",
+  "version": "0.0.1",
+  "description": "MCP server for GDB debugging functionality",
+  "bin": {
+    "embedded-gdb-mcp": "bin/cli.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vividcode-ai/embedded-gdb-mcp.git"
+  },
+  "keywords": ["mcp", "debugging", "embedded", "gdb"],
+  "license": "MIT",
+  "optionalDependencies": {
+    "@vividcodeai/embedded-gdb-mcp-darwin-x64": "0.0.1",
+    "@vividcodeai/embedded-gdb-mcp-darwin-arm64": "0.0.1",
+    "@vividcodeai/embedded-gdb-mcp-linux-x64": "0.0.1",
+    "@vividcodeai/embedded-gdb-mcp-linux-arm64": "0.0.1",
+    "@vividcodeai/embedded-gdb-mcp-win32-x64": "0.0.1"
+  },
+  "engines": {
+    "node": ">=16"
+  }
+}

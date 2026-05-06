@@ -1,0 +1,7 @@
+{
+  "name": "embedded-gdb-mcp-monorepo",
+  "private": true,
+  "workspaces": [
+    "packages/*"
+  ]
+}
